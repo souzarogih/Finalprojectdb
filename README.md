@@ -1,5 +1,9 @@
 ## Projeto final para disciplina de banco de dados
 
+### Grupo
+- Higor Souza
+- Maria Clara Lopes
+
 ### Funcionalidades implementadas
 
 Relatório
@@ -7,6 +11,8 @@ Relatório
 - [x] criar relatorio de vendas por cartao
 - [x] criar relatorio de vendas de produto
 - [x] vendas feitas por um usuário especifico
+- [ ] relatórios com join
+- [ ] relatorio com view
 
 Estatistica
 - [x] total de registro na base de produtos
