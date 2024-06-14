@@ -4,6 +4,7 @@ import com.higor.finalprojectdb.Product.dto.ProductRequest;
 import com.higor.finalprojectdb.Product.dto.ProductResponse;
 import com.higor.finalprojectdb.Product.model.Product;
 import com.higor.finalprojectdb.Product.repository.ProductRepository;
+import com.higor.finalprojectdb.User.dto.UserResponse;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,7 +12,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Log4j2
 @Service
@@ -44,6 +47,19 @@ public class ProductService {
                 productSaved.getCreatedAt(),
                 productSaved.getUpdatedAt()
         );
+    }
+
+    public List<ProductResponse> findAll() {
+        return productRepository.findAll().stream()
+                .map(product -> new ProductResponse(
+                        product.getId(),
+                        product.getProductName(),
+                        product.getProductCode(),
+                        product.getProductCategory(),
+                        product.getPrice(),
+                        product.getCreatedAt(),
+                        product.getUpdatedAt()
+                )).collect(Collectors.toList());
     }
 
     public ProductResponse findById(UUID id) {

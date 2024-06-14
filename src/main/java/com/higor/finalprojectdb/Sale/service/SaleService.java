@@ -4,6 +4,7 @@ import com.higor.finalprojectdb.Product.model.Product;
 import com.higor.finalprojectdb.Product.repository.ProductRepository;
 import com.higor.finalprojectdb.Sale.dto.SaleRequest;
 import com.higor.finalprojectdb.Sale.dto.SaleResponse;
+import com.higor.finalprojectdb.Sale.dto.TotalBaseDto;
 import com.higor.finalprojectdb.Sale.model.Sale;
 import com.higor.finalprojectdb.Sale.repository.SaleRepository;
 import com.higor.finalprojectdb.User.model.User;
@@ -96,5 +97,41 @@ public class SaleService {
                         sale.getDeliveryDate(),
                         sale.getCreatedAt()
                 )).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Sale not found with id: " + id));
+    }
+
+    public List<Sale> listSalePaymentType(String type) {
+        List<Sale> sales = null;
+        if (type.equals("PIX")){
+            sales = saleRepository.listSalePaymentType("PIX");
+        }else if(type.equals("CARD")){
+            sales = saleRepository.listSalePaymentType("CARD");
+        }else if(type.equals("CASH")){
+            sales = saleRepository.listSalePaymentType("CASH");
+        }
+        return sales;
+    }
+
+    public Object findTotalBase() {
+        Integer totalsale = saleRepository.findTotalSales();
+        Integer totalproduct = productRepository.findTotalProducts();
+        Integer totaluser = userRepository.findTotalUsers();
+
+        String pixType = "PIX";
+        Integer totalSalePixType = saleRepository.findTotalSalePaymentType(pixType);
+
+        String cardType = "CARD";
+        Integer totalSaleCardType = saleRepository.findTotalSalePaymentType(cardType);
+
+        String cashType = "CASH";
+        Integer totalSaleCashType = saleRepository.findTotalSalePaymentType(cashType);
+
+        return new TotalBaseDto(
+                totalsale,
+                totalproduct,
+                totaluser,
+                totalSalePixType,
+                totalSaleCardType,
+                totalSaleCashType
+        );
     }
 }

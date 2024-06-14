@@ -3,11 +3,13 @@ package com.higor.finalprojectdb.Product.controller;
 import com.higor.finalprojectdb.Product.dto.ProductRequest;
 import com.higor.finalprojectdb.Product.dto.ProductResponse;
 import com.higor.finalprojectdb.Product.service.ProductService;
+import com.higor.finalprojectdb.User.dto.UserResponse;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @Log4j2
@@ -23,6 +25,13 @@ public class ProductController {
     public ProductResponse create(@RequestBody ProductRequest productRequest){
         log.info("Receiving request for resource in productRequest={}", productRequest);
         return productService.create(productRequest);
+    }
+
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public List<ProductResponse> findAll(){
+        log.info("Receiving request for resource in findAll");
+        return productService.findAll();
     }
 
     @GetMapping("/{id}")

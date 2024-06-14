@@ -1,0 +1,155 @@
+Dados de Usuários para popular
+    {
+        "name": "Ana Souza",
+        "email": "ana.souza@mail.com",
+        "telefone": "83999990123",
+        "cpf": "123.456.789-01"
+    },
+    {
+        "name": "Carlos Silva",
+        "email": "carlos.silva@mail.com",
+        "telefone": "83999990234",
+        "cpf": "234.567.890-12"
+    },
+    {
+        "name": "Mariana Oliveira",
+        "email": "mariana.oliveira@mail.com",
+        "telefone": "83999990345",
+        "cpf": "345.678.901-23"
+    },
+    {
+        "name": "Pedro Santos",
+        "email": "pedro.santos@mail.com",
+        "telefone": "83999990456",
+        "cpf": "456.789.012-34"
+    },
+    {
+        "name": "Beatriz Lima",
+        "email": "beatriz.lima@mail.com",
+        "telefone": "83999990567",
+        "cpf": "567.890.123-45"
+    }
+      {
+            "name": "Lucas Almeida",
+            "email": "lucas.almeida@example.com",
+            "telefone": "83999990678",
+            "cpf": "678.901.234-56"
+        },
+        {
+            "name": "Fernanda Pereira",
+            "email": "fernanda.pereira@webmail.com",
+            "telefone": "83999990789",
+            "cpf": "789.012.345-67"
+        },
+        {
+            "name": "João Ferreira",
+            "email": "joao.ferreira@mail.com",
+            "telefone": "83999990890",
+            "cpf": "890.123.456-78"
+        },
+        {
+            "name": "Clara Costa",
+            "email": "clara.costa@email.com",
+            "telefone": "83999990901",
+            "cpf": "901.234.567-89"
+        },
+        {
+            "name": "Gabriel Ribeiro",
+            "email": "gabriel.ribeiro@inbox.com",
+            "telefone": "83999990012",
+            "cpf": "012.345.678-90"
+        },
+        {
+            "name": "Ana Ferreira",
+            "email": "ana.ferreira@webmail.com",
+            "telefone": "83999990123",
+            "cpf": "123.456.789-01"
+        },
+        {
+            "name": "Carlos Costa",
+            "email": "carlos.costa@example.com",
+            "telefone": "83999990234",
+            "cpf": "234.567.890-12"
+        },
+        {
+            "name": "Mariana Ribeiro",
+            "email": "mariana.ribeiro@mail.com",
+            "telefone": "83999990345",
+            "cpf": "345.678.901-23"
+        },
+        {
+            "name": "Pedro Almeida",
+            "email": "pedro.almeida@email.com",
+            "telefone": "83999990456",
+            "cpf": "456.789.012-34"
+        },
+        {
+            "name": "Beatriz Silva",
+            "email": "beatriz.silva@inbox.com",
+            "telefone": "83999990567",
+            "cpf": "567.890.123-45"
+        }
+]
+
+Dados dos produtos para popular
+
+{
+        "productName": "Café São Braz",
+        "productCode": 10,
+        "productCategory": "Alimentos",
+        "price": 9.59
+    },
+    {
+        "productName": "Arroz Tio João",
+        "productCode": 20,
+        "productCategory": "Alimentos",
+        "price": 19.90
+    },
+    {
+        "productName": "Feijão Carioca",
+        "productCode": 30,
+        "productCategory": "Alimentos",
+        "price": 7.49
+    },
+    {
+        "productName": "Macarrão Renata",
+        "productCode": 40,
+        "productCategory": "Alimentos",
+        "price": 4.99
+    },
+    {
+        "productName": "Leite Ninho",
+        "productCode": 50,
+        "productCategory": "Alimentos",
+        "price": 6.79
+    },
+    {
+        "productName": "Azeite Gallo",
+        "productCode": 60,
+        "productCategory": "Alimentos",
+        "price": 23.90
+    },
+    {
+        "productName": "Biscoito Oreo",
+        "productCode": 70,
+        "productCategory": "Alimentos",
+        "price": 3.49
+    },
+    {
+        "productName": "Chocolate Garoto",
+        "productCode": 80,
+        "productCategory": "Alimentos",
+        "price": 4.99
+    },
+    {
+        "productName": "Molho de Tomate Heinz",
+        "productCode": 90,
+        "productCategory": "Alimentos",
+        "price": 6.49
+    },
+    {
+        "productName": "Refrigerante Coca-Cola",
+        "productCode": 100,
+        "productCategory": "Bebidas",
+        "price": 5.99
+    }

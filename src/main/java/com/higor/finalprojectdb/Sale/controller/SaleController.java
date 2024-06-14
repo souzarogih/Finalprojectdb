@@ -2,6 +2,7 @@ package com.higor.finalprojectdb.Sale.controller;
 
 import com.higor.finalprojectdb.Sale.dto.SaleRequest;
 import com.higor.finalprojectdb.Sale.dto.SaleResponse;
+import com.higor.finalprojectdb.Sale.model.Sale;
 import com.higor.finalprojectdb.Sale.service.SaleService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +41,19 @@ public class SaleController {
         return saleService.findById(id);
     }
 
+    @GetMapping("/listPaymentForType/{type}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Sale> getSalesForType(@PathVariable String type){
+        log.info("Receiving request for resource in getStatistic");
+        return saleService.listSalePaymentType(type);
+    }
+
+    @GetMapping("/totalBase")
+    @ResponseStatus(HttpStatus.OK)
+    public Object getTotalSales(){
+        log.info("Receiving request for resource in getStatistic");
+        return saleService.findTotalBase();
+    }
 
 
 }
