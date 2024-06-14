@@ -134,4 +134,8 @@ public class SaleService {
                 totalSaleCashType
         );
     }
+
+    public List<Sale> salesForUser(UUID userId) {
+        return saleRepository.getSalesByUserId(userId);
+    }
 }

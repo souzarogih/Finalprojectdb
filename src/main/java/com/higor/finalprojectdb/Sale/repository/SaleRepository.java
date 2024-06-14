@@ -21,4 +21,10 @@ public interface SaleRepository extends JpaRepository<Sale, UUID> {
     @Query(value = "SELECT count(s.*) FROM Sale s", nativeQuery = true)
     Integer findTotalSales();
 
+    @Query(value = "SELECT s.* FROM Sale s where s.user_id = :userId", nativeQuery = true)
+    List<Sale> getSalesByUserId(UUID userId);
+
+
+
+
 }

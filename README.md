@@ -1,9 +1,12 @@
+## Projeto final para disciplina de banco de dados
 
+### Funcionalidades implementadas
 
-
+Relatório
 - [x] criar relatorio de vendas por pix
 - [x] criar relatorio de vendas por cartao
-- [x] criar relatorio de vendas de produto x
+- [x] criar relatorio de vendas de produto
+- [x] vendas feitas por um usuário especifico
 
 Estatistica
 - [x] total de registro na base de produtos
@@ -13,10 +16,7 @@ Estatistica
 - [x] total de vendas no cartao
 - [x] total de vendas no dinheiro
 
-vendas feitas por um usuário
-
-
-
+### Solicitação do projeto
 
 - [x] Modelagem dimensional entre bancos de dados(Produção e Homologação)
 - [ ] Criar dois bancos de dados, um com as tabelas de produção

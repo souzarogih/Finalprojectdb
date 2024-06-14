@@ -55,5 +55,12 @@ public class SaleController {
         return saleService.findTotalBase();
     }
 
+    @GetMapping("/salesForUser/{userId}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Sale> getSalesForUser(@PathVariable UUID userId){
+        log.info("Receiving request for resource in getStatistic");
+        return saleService.salesForUser(userId);
+    }
+
 
 }
